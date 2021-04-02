@@ -1,5 +1,5 @@
 *{
-	padding:0;
+	padding:3px;
 	margin:5px;
 	text-align:center;
 }
@@ -7,6 +7,7 @@ body
 {
 	background-color:blue;
 }
+
 @media screen and (min-width:1024px)
 {
 	body
@@ -24,7 +25,7 @@ body
 {
 	body
 	{
-		background-color:grey;
+		background-color:gray);
 		flex-direction:column;
 	}
 	.calculator
@@ -61,56 +62,65 @@ body
 	}
 }
 
+
 .calculator{
-	width:650px;
-	height:620px;
+	width: 60vw;
+	height:80vh;
 	background-color:#c0c0c0;
-	box-shadow:0px 0px 0px 10px #666;
+	box-shadow:0px 0px 0px 8px #666;
 	border:5px solid black;
 	border-radius:10px;
-	min-height:10vh;
-	min-width:10vw;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 #display{
-	width:620px;
-	height:40px;
+	width:40vw;
+	height:8vh;
 	text-align:right;
 	background-color:black;
 	border:3px solid white;
-	font-size:18px;
+	font-size:160%;
 	left:2px;
 	top:2px;
 	color:#7fff00;
+	min-height: 0px;
+
 }
 .bTnTop{
 	color:white;
 	background-color:#6f6f6f;
-	font-size:14px;
+	font-size:110%;
 	margin:auto;
-	width:50px;
-	height:25px;
+	width:100%;
+	height:100%;
+	min-height: 30px;
 }
 .bTnNum{
 	color:white;
 	background-color:black;
-	font-size:14px;
+	font-size:110%;
 	margin:auto;
-	width:50px;
-	height:25px;
+	min-height: 30px;
+	width:100%;
+	height:100%;
 }
 .bTnMath{
 	color:white;
 	background-color:#ff4561;
-	font-size:14px;
+	font-size:110%;
 	margin:auto;
-	width:50px;
-	height:25px;
+	width:100%;
+	height:100%;
+	min-height: 30px;
+
 }
 .bTnOpps{
 	color:white;
 	background-color:#ff9933;
-	font-size:14px;
+	font-size:121%;
 	margin:auto;
-	width:50px;
-	height:25px;
+	width:100%;
+	height:100%;
+	min-height: 30px;
+
 }
