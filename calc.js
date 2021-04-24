@@ -8,29 +8,29 @@ function addChar(input,character)
 
 function cos(form)
 {
-	form.display.value = Math.cos(form.display.value);
+	form.display.value = Math.cos(form.display.value * (Math.PI / 180));
 }
 
 function sin(form)
 {
-	form.display.value = Math.sin(form.display.value);
+	form.display.value = Math.sin(form.display.value * (Math.PI/180));
 }
 function tan(form)
 {
-	form.display.value = Math.tan(form.display.value);
+	form.display.value = Math.tan(form.display.value * (Math.PI/180));
 }
 function acos(form)
 {
-	form.display.value = Math.acos(form.display.value);
+	form.display.value = Math.acos(form.display.value * (Math.PI/180));
 }
 
 function asin(form)
 {
-	form.display.value = Math.asin(form.display.value);
+	form.display.value = Math.asin(form.display.value * (Math.PI/180));
 }
 function atan(form)
 {
-	form.display.value = Math.atan(form.display.value);
+	form.display.value = Math.atan(form.display.value * (Math.PI/180));
 }
 
 function sqrt(form)
@@ -45,12 +45,12 @@ function exp(form)
 {
 	form.display.value = Math.exp(form.display.value);
 }
-function radians() {
-  display.value = display.value * (Math.PI / 180);
+function radians(form) {
+  form.display.value = form.display.value * (Math.PI / 180);
 }
 
-function degrees() {
-  display.value = display.value * (180 / Math.PI);
+function degrees(form) {
+  form.display.value = form.display.value * (180 / Math.PI);
 }
 function log(form) {
   form.display.value = Math.log10(form.display.value);
@@ -105,7 +105,16 @@ function changeSign(input)
 }
 function compute(form)
 {
-	form.display.value = eval(form.display.value);
+/*	form.display.value = eval(form.display.value); */
+	if ((display.value).indexOf("^") > -1) {
+		var base = (display.value).slice(0, (display.value).indexOf("^"));
+		var exponent = (display.value).slice((display.value).indexOf("^") + 1);
+		display.value = eval("Math.pow(" + base + "," + exponent + ")");
+	  } else {
+		display.value = eval(display.value);
+		checkLength();
+		syntaxError();
+	  }
 }
 function square(form)
 {
